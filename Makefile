@@ -14,3 +14,4 @@ package_py: ## Make a python package
 lint: ## lint the code
 	uv run black config_manager
 	uv run pylint config_manager
+	uv lock

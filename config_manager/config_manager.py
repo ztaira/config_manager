@@ -12,7 +12,7 @@ def run(config_url: str):
     # putting one set of data in multiple locations is not supported for now
     metadata = requests.get(config_url, timeout=10).json()
 
-    print("Got config metadata: {metadata}")
+    print(f"Got config metadata: {metadata}")
 
     for endpoint, filesystem_location in metadata.items():
         data_url = urljoin(config_url, endpoint)
